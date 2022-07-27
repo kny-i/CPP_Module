@@ -11,17 +11,20 @@ int main(void) {
 
 		switch (instructionNumber) {
 			case 1 : {
-				phoneBook.executeAdd();
+				//phoneBook.executeAdd();
+				printf("__test__0\n");
 				break;
 			}
 			case 2 : {
-				phoneBook.executeSearch();
+				//phoneBook.executeSearch();
+				printf("__test__01\n");
 				break;
 			}
 			case 3 :
 				exit(0);
 			case 4 : {
-				phoneBook.executeShowList();
+				printf("__test__02\n");
+				//phoneBook.executeShowList();
 				break;
 			}
 			default : {

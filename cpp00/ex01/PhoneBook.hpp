@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include "Contact.hpp"
+#include <libc.h>
 
 class PhoneBook{
 
