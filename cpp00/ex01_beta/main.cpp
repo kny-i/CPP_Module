@@ -4,5 +4,5 @@ int main()
 {
 	Phonebook phonebook;
 
-	phonebook.start();
+	phonebook.init();
 }
