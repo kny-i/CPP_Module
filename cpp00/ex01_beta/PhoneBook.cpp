@@ -1,5 +1,4 @@
 #include "PhoneBook.hpp"
-#include "color.hpp"
 #include <string>
 
 Phonebook::Phonebook() : index_head(0) {}
@@ -12,7 +11,7 @@ static std::string readline(std::string prompt, int width)
 
 	while (true)
 	{
-		std::cout << CYAN << std::setw(width) << prompt << RESET;
+		std::cout << std::setw(width) << prompt;
 		std::getline(std::cin, input);
 		if (std::cin.eof() || std::cin.fail() || std::cin.bad())
 			throw std::exception();
@@ -53,7 +52,7 @@ static int readIndex()
 			if (isBetween(index, 0, MAX_CONTACTS - 1))
 				return (index);
 		}
-		std::cout << RED << "Error: please type index number between 0-7" << RESET << std::endl;
+		std::cout <<  "Error: please type index number between 0-7" << std::endl;
 	}
 }
 
@@ -72,16 +71,22 @@ void Phonebook::add()
 		if (isNumber(phone_number))
 			break ;
 		else
-			std::cout << RED << "  Error: Please input digits for the phone number" << RESET << std::endl;;
+			std::cout << "  Error: Please input digits for the phone number" <<  std::endl;;
 	}
 	contacts[index_head].setPhoneNumber(phone_number);
 	contacts[index_head].setDarkestSecret(readline("Darkest Secret: ", SUB_WIDTH));
 	contacts[index_head].contactFill();
-	std::cout << GREEN << "Contact is saved in index No:" << index_head << RESET << std::endl;
+	std::cout << "Contact is saved in index No:" << index_head <<  std::endl;
 	index_head++;
 }
 
 
+static std::string to_10chrs(std::string content)
+{
+	if (content.size() > 10)
+		return (content.replace(9, 1, ".").substr(0, 10));
+	return (content);
+}
 
 void Phonebook::showNames(int index)
 {
@@ -99,12 +104,7 @@ static void printHeader()
 
 void Phonebook::showIndex()
 {
-	printHeastatic std::string to_10chrs(std::string content)
-	{
-		if (content.size() > 10)
-			return (content.replace(9, 1, ".").substr(0, 10));
-		return (content);
-	}der();
+	printHeader();
 	for (int i = 0; i < MAX_CONTACTS; i++)
 	{
 		std::cout << "[  " << i << "  ]|";
@@ -112,6 +112,7 @@ void Phonebook::showIndex()
 	}
 	std::cout << std::endl;
 }
+
 
 void Phonebook::showAll(int index)
 {
@@ -131,14 +132,14 @@ void	Phonebook::search()
 	if (contacts[index].checkContactFill())
 		showAll(index);
 	else
-		std::cout << RED << "Index [" << index << "] is not registered." << RESET << std::endl;
+		std::cout <<  "Index [" << index << "] is not registered." << std::endl;
 	std::cout << std::endl;
 }
 
 void Phonebook::start()
 {
-	std::cout << YELLOW << "<< Welcome to My Awesome Phonebook >>" << RESET << std::endl;
-	std::cout << CYAN << "Please enter a command. [ADD/SEARCH/EXIT]" << RESET << std::endl;
+	std::cout << "<< Welcome to My Awesome Phonebook >>" << std::endl;
+	std::cout << "Please enter a command. [ADD/SEARCH/EXIT]" << std::endl;
 	try
 	{
 		while (true)
@@ -151,11 +152,11 @@ void Phonebook::start()
 			else if (line == "EXIT")
 				break;
 			else
-				std::cout << RED << "Error: Invalid command.\nPlease type a valid command[ADD/SEARCH/EXIT]" << RESET << std::endl;
+				std::cout << "Error: Invalid command.\nPlease type a valid command[ADD/SEARCH/EXIT]" <<  std::endl;
 		}
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << RED << "Error" << RESET << std::endl;
+		std::cerr << "Error" << std::endl;
 	}
 }
