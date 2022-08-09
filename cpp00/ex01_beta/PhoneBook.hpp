@@ -20,7 +20,7 @@ public:
 	void init();
 	void add();
 	void search();
-	std::string  getstr();
+	std::string getstr(std::string prompt);
 };
 
 #endif

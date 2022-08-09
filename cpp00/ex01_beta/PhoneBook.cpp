@@ -5,15 +5,28 @@ PhoneBook::PhoneBook() : index_head(0) {}
 
 PhoneBook::~PhoneBook() {}
 
-std::string PhoneBook::getstr()
+static bool isSpace(std::string str)
+{
+	size_t i;
+	for (i = 0; i < str.size(); i++)
+	{
+		if  (!std::isspace(str[i]))
+			return (false);
+	}
+	return (true);
+}
+
+std::string PhoneBook::getstr(std::string prompt)
 {
 	std::string str;
 
 	while (1)
 	{
+		std::cout << std::setw(prompt.size()) << prompt << " -> ";
 		if (!std::getline(std::cin, str))
 			throw std::exception();
-		break;
+		if (str.size() != 0 && !isSpace(str))
+			break;
 	}
 	return (str);
 }
@@ -35,19 +48,19 @@ void PhoneBook::add()
 
 	if (index_head == MAX_CONTACTS)
 		index_head = 0;
-	contacts[index_head].setFirstName(getstr());
-	contacts[index_head].setLastName(getstr());
-	contacts[index_head].setNickName(getstr());
+	contacts[index_head].setFirstName(getstr("FirstName"));
+	contacts[index_head].setLastName(getstr("LastName"));
+	contacts[index_head].setNickName(getstr("NickName"));
 	while (1)
 	{
-		phone_number = getstr();
+		phone_number = getstr("PhoneNumber");
 		if (isNumber(phone_number))
 			break ;
 		else
 			std::cout << "  Error: Please input digits " <<  std::endl;
 	}
-	contacts[index_head].setPhoneNumber(getstr());
-	contacts[index_head].setDarkestSecret(getstr());
+	contacts[index_head].setPhoneNumber(phone_number);
+	contacts[index_head].setDarkestSecret(getstr("DarkestSecret"));
 	contacts[index_head].done();
 }
 
@@ -67,8 +80,7 @@ void PhoneBook::init()
 			std::cout << "----------------------------------------" << std::endl;
 			std::cout << "type the commands like ADD, SEARCH, EXIT" << std::endl;
 			std::cout << "----------------------------------------" << std::endl;
-			if (!std::getline(std::cin, str))
-				break ;
+			str = getstr("");
 			if (str == "ADD") {
 				phoneBook.add();
 				continue ;
