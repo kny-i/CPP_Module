@@ -5,9 +5,50 @@ PhoneBook::PhoneBook() : index_head(0) {}
 
 PhoneBook::~PhoneBook() {}
 
+std::string PhoneBook::getstr()
+{
+	std::string str;
+
+	while (1)
+	{
+		if (!std::getline(std::cin, str))
+			throw std::exception();
+		break;
+	}
+	return (str);
+}
+
+static bool isNumber(std::string str)
+{
+	size_t i;
+	for (i = 0; i < str.size(); i++)
+	{
+		if  (!std::isdigit(str[i]))
+			return (false);
+	}
+	return (true);
+}
+
 void PhoneBook::add()
 {
-	std::cout  << index_head << std::endl;
+	std::string phone_number;
+
+	if (index_head == MAX_CONTACTS)
+		index_head = 0;
+	contacts[index_head].setFirstName(getstr());
+	contacts[index_head].setLastName(getstr());
+	contacts[index_head].setNickName(getstr());
+	while (1)
+	{
+		phone_number = getstr();
+		if (isNumber(phone_number))
+			break ;
+		else
+			std::cout << "  Error: Please input digits " <<  std::endl;
+	}
+	contacts[index_head].setPhoneNumber(getstr());
+	contacts[index_head].setDarkestSecret(getstr());
+	contacts[index_head].done();
 }
 
 void PhoneBook::search()

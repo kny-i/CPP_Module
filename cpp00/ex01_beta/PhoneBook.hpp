@@ -20,6 +20,7 @@ public:
 	void init();
 	void add();
 	void search();
+	std::string  getstr();
 };
 
 #endif
