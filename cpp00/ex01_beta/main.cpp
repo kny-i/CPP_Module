@@ -2,7 +2,7 @@
 
 int main()
 {
-	Phonebook phonebook;
+	PhoneBook PhoneBook;
 
-	phonebook.init();
+	PhoneBook.init();
 }

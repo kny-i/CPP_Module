@@ -1,12 +1,48 @@
 #include "PhoneBook.hpp"
 #include <string>
 
-Phonebook::Phonebook() : index_head(0) {}
+PhoneBook::PhoneBook() : index_head(0) {}
 
-Phonebook::~Phonebook() {}
+PhoneBook::~PhoneBook() {}
 
-void Phonebook::init()
+void PhoneBook::add()
 {
-	std::cout << "Hello" << std::endl;
-	std::cout << index_head << std::endl;
+	std::cout  << index_head << std::endl;
+}
+
+void PhoneBook::search()
+{
+	std::cout  << "test" << std::endl;
+}
+
+void PhoneBook::init()
+{
+	PhoneBook phoneBook;
+	std::string str;
+	try
+	{
+		while (1)
+		{
+			std::cout << "----------------------------------------" << std::endl;
+			std::cout << "type the commands like ADD, SEARCH, EXIT" << std::endl;
+			std::cout << "----------------------------------------" << std::endl;
+			if (!std::getline(std::cin, str))
+				break ;
+			if (str == "ADD") {
+				phoneBook.add();
+				continue ;
+			}
+			else if (str == "SEARCH") {
+				phoneBook.search();
+				continue ;
+			}
+			else if (str == "EXIT") {
+				break ;
+			}
+		}
+	}
+	catch(std::exception& e)
+	{
+		std::cerr << "Error" << std::endl;
+	}
 }
