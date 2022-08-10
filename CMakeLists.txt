@@ -9,7 +9,7 @@ add_executable(CPP_Module
         cpp00/ex00/megaphone.cpp
         cpp00/ex01/Contact.cpp
         cpp00/ex01/Contact.hpp
-        cpp00/ex01/main.c
+        cpp00/ex01/main.cpp
         cpp00/ex01/PhoneBook.cpp
         cpp00/ex01/PhoneBook.hpp
         cpp00/test/bool.cpp

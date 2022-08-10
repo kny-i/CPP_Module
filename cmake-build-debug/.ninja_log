@@ -1,10 +1,10 @@
 # ninja log v5
-0	819	1659157287373006646	CMakeFiles/CPP_Module.dir/cpp00/test/const.cpp.o	581b5343ac78c637
 0	855	1659157287408722584	CMakeFiles/CPP_Module.dir/cpp00/test/dest.cpp.o	4d86762e345a4e76
-0	884	1659157287437530200	CMakeFiles/CPP_Module.dir/cpp00/test/class.cpp.o	925170a545d95e0c
-1	893	1659157287447149335	CMakeFiles/CPP_Module.dir/cpp00/test/test.cpp.o	71a2ff1181b9c495
+5	920	1659157287475277123	CMakeFiles/CPP_Module.dir/cpp00/test/bool.cpp.o	87bd6fa29625bdc0
 2	902	1659157287456899720	CMakeFiles/CPP_Module.dir/cpp00/ex00/megaphone.cpp.o	c816eb05d422c8f7
+0	884	1659157287437530200	CMakeFiles/CPP_Module.dir/cpp00/test/class.cpp.o	925170a545d95e0c
+0	819	1659157287373006646	CMakeFiles/CPP_Module.dir/cpp00/test/const.cpp.o	581b5343ac78c637
+1	893	1659157287447149335	CMakeFiles/CPP_Module.dir/cpp00/test/test.cpp.o	71a2ff1181b9c495
+3	925	1659157287480006087	CMakeFiles/CPP_Module.dir/cpp00/ex01/PhoneBook.cpp.o	6429545c28697778
 3	903	1659157287456204725	CMakeFiles/CPP_Module.dir/cpp00/ex01/Contact.cpp.o	e466f56b18362a7c
 1	904	1659157287458943538	CMakeFiles/CPP_Module.dir/cpp00/test/scope.cpp.o	32629ae8c826ef06
-5	920	1659157287475277123	CMakeFiles/CPP_Module.dir/cpp00/test/bool.cpp.o	87bd6fa29625bdc0
-3	925	1659157287480006087	CMakeFiles/CPP_Module.dir/cpp00/ex01/PhoneBook.cpp.o	6429545c28697778
