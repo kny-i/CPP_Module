@@ -9,7 +9,7 @@ int	main(int argc, char **argv)
 		for (int i = 1; argv[i] != NULL; i++)
 		{
 			for (int j = 0; argv[i][j] != '\0'; j++)
-				argv[i][j] = (char) toupper(argv[i][j]);
+				argv[i][j] = (char) std::toupper(argv[i][j]);
 			std::cout << argv[i];
 		}
 		std::cout << std::endl;
