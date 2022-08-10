@@ -34,7 +34,7 @@ public:
 	std::string	getPhoneNumber() const;
 	std::string	getDarkestSecret() const;
 
-	int         checkContactFill() const;
+	int         checkdone() const;
 };
 
 #endif

@@ -90,6 +90,7 @@ static std::string to_10chrs(std::string content)
 
 void Phonebook::showNames(int index)
 {
+	std::cout << index << "|";
 	std::cout << std::setw(HEADER_WIDTH) << to_10chrs(contacts[index].getFirstName()) << "|" ;
 	std::cout << std::setw(HEADER_WIDTH) << to_10chrs(contacts[index].getLastName()) << "|" ;
 	std::cout << std::setw(HEADER_WIDTH) << to_10chrs(contacts[index].getNickName()) << "|" << std::endl;

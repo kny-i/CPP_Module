@@ -21,6 +21,9 @@ public:
 	void add();
 	void search();
 	std::string getstr(std::string prompt);
+	void put_one_line(int index);
+	void put_colums();
+	void put_index_info(int i);
 };
 
 #endif

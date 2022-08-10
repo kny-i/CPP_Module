@@ -32,4 +32,4 @@ std::string Contact::getPhoneNumber() const { return phone_number; }
 
 std::string Contact::getDarkestSecret() const { return darkest_secret; }
 
-int Contact::checkContactFill() const { return (isFilled); }
+int Contact::checkdone() const { return (isFilled); }
