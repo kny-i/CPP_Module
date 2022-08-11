@@ -1,5 +1,5 @@
 NAME	:= ex04
-SRCS	:= main.cpp
+SRCS	:= main.cpp replace.cpp
 OBJS	:= $(SRCS:.cpp=.o)
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -pedantic

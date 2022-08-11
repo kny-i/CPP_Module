@@ -8,16 +8,16 @@
 class Replace
 {
 private:
-	std::string s1;
-	std::string s2;
-	std::istream &cin;
-	std::ostream &cout;
+	std::string search;
+	std::string newWord;
+	std::istream &ifs;
+	std::ostream &ofs;
 
 public:
-	Replace(std::string const &s1, std::string const &s2, std::istream &cin, std::ostream &cout);
+	Replace(const std::string &search, const std::string &newWord, std::istream &ifs, std::ostream &ofs);
 	~Replace();
 
-	void replace();
+	void routine();
 };
 
 #endif
