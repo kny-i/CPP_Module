@@ -1,5 +1,5 @@
-#ifndef INCLUDE_GUARD_ZOMBIE_HPP
-#define INCLUDE_GUARD_ZOMBIE_HPP
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <iostream>
 #include <sys/wait.h>
@@ -10,12 +10,12 @@ private:
 	std::string name;
 
 public:
-	Zombie(std::string name);
+	Zombie(const std::string &str);
 	~Zombie();
 	void announce(void);
 };
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
+Zombie* newZombie(const std::string &str);
+void randomChump(const std::string &str);
 
 #endif
