@@ -17,8 +17,7 @@ Harl::~Harl()
 
 void Harl::undefined( void )
 {
-	std::cout << "I don't know what to say..."
-			  << "(Error: Invalid Arguments)" << std::endl;
+	std::cout << "I have no idea like what to say ..."<< std::endl;
 }
 
 void Harl::debug( void )
