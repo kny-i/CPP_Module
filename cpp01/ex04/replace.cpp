@@ -18,8 +18,7 @@ void Replace::routine()
 
 	for (std::string buf; std::getline(ifs, buf);)
 	{
-		std::size_t search_pos = 0;
-		search_pos = buf.find((search));
+		std::size_t search_pos = buf.find((search));
 		while (search_pos != std::string::npos)
 		{
 			buf.erase(search_pos, searchLen);

@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 			std::cerr << "can't open " << filename << std::endl;
 			throw std::exception();
 		}
-		ofs.open(filename + ".replace", std::ios::out | std::ios::trunc );
+		ofs.open(filename + ".replace", std::ios::out);
 		if (!ofs)
 		{
 			std::cerr << "can't open " << filename << ".replace" << std::endl;
