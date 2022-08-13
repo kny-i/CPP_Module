@@ -97,7 +97,7 @@ static bool is_inrange(const std::string str)
 	int i;
 
 	i = str[0] - '0';
-	if (0 <= i && i <= MAX_CONTACTS)
+	if (0 <= i && i < MAX_CONTACTS)
 		return (true);
 	else
 		return (false);
