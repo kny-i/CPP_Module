@@ -13,7 +13,8 @@ private:
 	int index_head;
 public:
 
-	PhoneBook() : index_head(0) {}
+	PhoneBook();
+	~PhoneBook();
 	void init();
 	void add();
 	void search();

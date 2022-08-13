@@ -1,6 +1,16 @@
 #include "PhoneBook.hpp"
 #include <string>
 
+PhoneBook::PhoneBook() : index_head(0)
+{
+	std::cout << "constructor called " << std::endl;
+}
+
+PhoneBook::~PhoneBook()
+{
+	std::cout << "destructor called " << std::endl;
+}
+
 static bool isSpace(std::string str)
 {
 	for (size_t i = 0; i < str.size(); i++)
@@ -68,8 +78,8 @@ static void putHeader()
 
 static std::string convert(std::string str)
 {
-	if (str.size() > 10)
-		return (str.replace(9, 1, ".").substr(0, 10));
+	if (str.size() > COLUM_WIDTH)
+		return (str.replace(9, 1, ".").substr(0, COLUM_WIDTH));
 	return (str);
 }
 
