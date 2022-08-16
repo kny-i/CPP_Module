@@ -16,6 +16,6 @@ int main()
 	test("INFO");
 	test("WARNING");
 	test("ERROR");
-	test("B");
+	test("HOGE");
 	test("");
 }
