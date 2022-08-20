@@ -20,7 +20,7 @@ public:
 	unsigned int getHitPoints() const;
 	unsigned int getEnergyPoint() const;
 	unsigned int getAttackDamage() const;
-	void printInfo(const ClapTrap &pclass);
+	void printInfo();
 
 private:
 	std::string name;
