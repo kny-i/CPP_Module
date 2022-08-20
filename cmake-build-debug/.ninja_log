@@ -1,9 +1,9 @@
 # ninja log v5
 2	830	1660239650987599532	CMakeFiles/CPP_Module.dir/cpp01/ex00/randomChump.cpp.o	7c6d97ad8c5c3ad1
 1	831	1660239650991931899	CMakeFiles/CPP_Module.dir/cpp01/ex00/main.cpp.o	dff832dbec14e311
+2	858	1660239651022066223	CMakeFiles/CPP_Module.dir/cpp01/ex00/Zombie.cpp.o	945752fb1e6ce7da
 0	840	1660239651001370250	CMakeFiles/CPP_Module.dir/cpp00/ex00/megaphone.cpp.o	17ba5cc47a980738
 1	844	1660239651005202707	CMakeFiles/CPP_Module.dir/cpp01/ex00/newZombie.cpp.o	9d3357351f9f23f0
-1	848	1660239651012296001	CMakeFiles/CPP_Module.dir/cpp00/ex01/main.cpp.o	20a43c3bdc1bedeb
 0	851	1660239651015420674	CMakeFiles/CPP_Module.dir/cpp00/ex01/Contact.cpp.o	84aa4abe061202ca
-2	858	1660239651022066223	CMakeFiles/CPP_Module.dir/cpp01/ex00/Zombie.cpp.o	945752fb1e6ce7da
+1	848	1660239651012296001	CMakeFiles/CPP_Module.dir/cpp00/ex01/main.cpp.o	20a43c3bdc1bedeb
 1	873	1660239651037546964	CMakeFiles/CPP_Module.dir/cpp00/ex01/PhoneBook.cpp.o	775edcfd407b2ce8
