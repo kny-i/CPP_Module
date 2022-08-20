@@ -3,8 +3,7 @@ SRCS	:= Fixed.cpp main.cpp
 
 OBJS	:= $(SRCS:.cpp=.o)
 CXX     := c++
-CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -pedantic ${INCS}
-
+CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -pedantic
 all     : 	$(NAME)
 
 $(NAME) : 	$(OBJS)
