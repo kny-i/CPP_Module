@@ -17,7 +17,7 @@ Fixed::Fixed(Fixed const &other)
 }
 
 
-ixed::Fixed(const int input)
+Fixed::Fixed(const int input)
 {
 	std::cout << "Int constructor called " << std::endl;
 	this->raw = input << this->point;
@@ -26,7 +26,7 @@ ixed::Fixed(const int input)
 Fixed::Fixed(const float input)
 {
 	std::cout << "Float constructor called" << std::endl;
-	this->raw = roundf()
+	this->raw = (int)roundf(input * (1 << this->point));
 }
 
 Fixed &Fixed::operator=(Fixed const &other)
@@ -39,14 +39,14 @@ Fixed &Fixed::operator=(Fixed const &other)
 	return *this;
 }
 
-int	Fixed::toFloat() const
+float 	Fixed::toFloat(void) const
 {
 	return ((float)this->raw / (float)(1 << this->point));
 }
 
-int Fixed::Fixed()
+int Fixed::toInt(void) const
 {
-	return (this->rae >> this->point);
+	return (this->raw >> this->point);
 }
 
 int Fixed::getRawBits( void ) const
