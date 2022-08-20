@@ -70,3 +70,13 @@ void ClapTrap::beRepaired(unsigned int amount)
 	std::cout
 			<< "ClapTrap " << name << " is repaired " << amount << " points. (" << hitPoint << "HP left)" << std::endl;
 }
+
+void ClapTrap::printInfo(const ClapTrap &pclass)
+{
+	std::cout << "---------- printinfo ----------" << std::endl;
+	std::cout << "Name: " << pclass.getName() << std::endl;
+	std::cout << " [HP]: " << pclass.getHitPoints() << std::endl;
+	std::cout << " [EP]: " << pclass.getEnergyPoint() << std::endl;
+	std::cout << " [AD]: " << pclass.getAttackDamage() << std::endl;
+
+}
