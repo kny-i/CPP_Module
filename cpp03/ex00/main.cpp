@@ -2,7 +2,6 @@
 
 int	main()
 {
-	std::cout << "---------- subject test ----------" << std::endl;
 	ClapTrap dog("dog");
 	dog.printInfo();
 	dog.attack("cat");

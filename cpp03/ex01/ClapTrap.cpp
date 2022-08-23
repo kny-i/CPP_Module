@@ -28,10 +28,10 @@ ClapTrap::~ClapTrap()
 	std::cerr << "ClapTrap destructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &rhs)
+ClapTrap::ClapTrap(const ClapTrap &other)
 {
 	std::cerr << "ClapTrap copy constructor called" << std::endl;
-	*this = rhs;
+	*this = other;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
