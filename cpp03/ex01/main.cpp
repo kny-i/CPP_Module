@@ -28,6 +28,7 @@ int	main()
 	dog.takeDamage(2);
 	dog.beRepaired(3);
 	dog.attack("cat");
+	dog.guardGate();
 		for (int i = 0; i < 100; i++)
 	{
 		dog.attack("cat");
