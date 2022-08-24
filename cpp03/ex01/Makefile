@@ -1,4 +1,4 @@
-NAME	:= ex00
+NAME	:= ex01
 SRCS	:= ClapTrap.cpp main.cpp ScavTrap.cpp
 
 OBJS	:= $(SRCS:.cpp=.o)
