@@ -42,7 +42,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
 void ScavTrap::attack(std::string const &target)
 {
 	if (energyPoint <= 0 || hitPoint <= 0) {
-		std::cout << "ClapTrap " << name << " lack of energyPoint or hitPoint." << std::endl;
+		std::cout << "ScavTrap " << name << " lack of energyPoint or hitPoint." << std::endl;
 		return;
 	}
 	std::cout
