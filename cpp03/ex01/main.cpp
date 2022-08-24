@@ -2,7 +2,7 @@
 
 int	main()
 {
-	std::cout << "----clap trap test----" << std::endl;
+/*	std::cout << "----clap trap test----" << std::endl;
 	ClapTrap fox("fox");
 	fox.printInfo();
 	fox.attack("cat");
@@ -19,19 +19,19 @@ int	main()
 	fox.attack("cat");
 	fox.printInfo();
 	fox.takeDamage(100);
-	fox.printInfo();
+	fox.printInfo();*/
+
+	std::cout << "----scav trap test----" << std::endl;
 	ScavTrap dog("dog");
 	dog.printInfo();
 	dog.attack("cat");
 	dog.takeDamage(2);
 	dog.beRepaired(3);
 	dog.attack("cat");
-
-	std::cout << "----scav trap test----" << std::endl;
-/*		for (int i = 0; i < 100; i++)
+		for (int i = 0; i < 100; i++)
 	{
 		dog.attack("cat");
-	}*/
+	}
 	dog.printInfo();
 	dog.takeDamage(101);
 	dog.printInfo();
