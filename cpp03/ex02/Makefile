@@ -1,5 +1,5 @@
 NAME	:= ex00
-SRCS	:= ClapTrap.cpp main.cpp ScavTrap.cpp
+SRCS	:= ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 
 OBJS	:= $(SRCS:.cpp=.o)
 CXX     := c++
