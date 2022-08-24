@@ -1,4 +1,3 @@
-
 #ifndef CPP_CLAPTRAP_HPP
 #define CPP_CLAPTRAP_HPP
 #include <iostream>
