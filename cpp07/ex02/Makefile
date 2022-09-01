@@ -1,7 +1,7 @@
-NAME = serialization
+NAME = array
 srcs = $(wildcard ./*.cpp)
 objs = $(srcs:.cpp=.o)
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -pedantic
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -g3 -fsanitize=address -pedantic
 CXX = c++
 
 all: $(NAME)
@@ -26,3 +26,4 @@ err: all
 	./$(NAME) 1>/dev/null
 
 .PHONY: all clean fclean re out err run
+
